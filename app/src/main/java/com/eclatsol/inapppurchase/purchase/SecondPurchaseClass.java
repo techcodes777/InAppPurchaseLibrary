@@ -24,7 +24,7 @@ import com.google.common.collect.ImmutableList;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PurchaseClass {
+public class SecondPurchaseClass {
 
     public static Activity activityMain;
     public static BillingClient billingClient;
@@ -122,9 +122,9 @@ public class PurchaseClass {
         });
     }
 
-    public static void onClickRemoveAds(int position) {
+    public static void onClickRemoveAds() {
 
-        ProductDetails productDetails = productDetailsList.get(position);
+        ProductDetails productDetails = productDetailsList.get(0);
         assert productDetails.getSubscriptionOfferDetails() != null;
         ImmutableList<BillingFlowParams.ProductDetailsParams> productDetailsParamsList =
                 ImmutableList.of(
