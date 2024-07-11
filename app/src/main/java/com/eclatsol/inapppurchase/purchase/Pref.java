@@ -10,7 +10,7 @@ public class Pref {
     private SharedPreferences.Editor prefsEditor;
 
     public Pref(Context context) {
-        appSharedPrefs = context.getSharedPreferences("german_kids_pref", Activity.MODE_PRIVATE);
+        appSharedPrefs = context.getSharedPreferences("inapp_purchase", Activity.MODE_PRIVATE);
         prefsEditor = appSharedPrefs.edit();
     }
 
@@ -30,12 +30,12 @@ public class Pref {
 
     public void init(Context context) {
         if (context == null) {
-            appSharedPrefs = context.getSharedPreferences("german_kids_pref", Activity.MODE_PRIVATE);
+            appSharedPrefs = context.getSharedPreferences("inapp_purchase", Activity.MODE_PRIVATE);
             prefsEditor = appSharedPrefs.edit();
         }
 
         if (appSharedPrefs == null) {
-            appSharedPrefs = context.getSharedPreferences("german_kids_pref", Activity.MODE_PRIVATE);
+            appSharedPrefs = context.getSharedPreferences("inapp_purchase", Activity.MODE_PRIVATE);
             prefsEditor = appSharedPrefs.edit();
         }
     }
