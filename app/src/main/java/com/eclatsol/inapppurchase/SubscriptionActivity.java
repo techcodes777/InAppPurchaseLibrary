@@ -29,20 +29,11 @@ public class SubscriptionActivity extends AppCompatActivity implements Subscript
     int position = 0;
     private TextView tvNoDataFound;
 
-    String[] permission;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subscription);
-
-        if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.TIRAMISU){
-            permission = new String[]{Manifest.permission.READ_MEDIA_AUDIO, Manifest.permission.READ_MEDIA_VIDEO};
-
-        }else {
-            permission = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
-
-        }
 
         Pref.getInstance().init(getApplicationContext());
         onPurchaseInitialization(this);
